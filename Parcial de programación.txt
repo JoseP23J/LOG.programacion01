@@ -1,0 +1,5 @@
+Parcial de programación
+Preguntas respondidas:
+1) Para llevar un buen control de la producción lechera, es importante definir ciertas variables que nos ayuden a registrar cuántos animales fueron ordeñados y cuántos litros de leche se obtuvieron. Esto nos permite evaluar la eficiencia del proceso y asegurarnos de que la información sea clara y útil.
+2) Para recorrer todos los datos de manera organizada, se usa un ciclo que repite la operación hasta que se haya registrado toda la producción del día. Además, se necesita una condición que nos ayude a contar solo los animales que realmente produjeron leche, evitando registros innecesarios o errores en los cálculos.
+3) Si queremos saber qué tipo de animal aportó más a la producción, podemos hacer una comparación entre los datos registrados y quedarnos con el que tuvo el mayor aporte. Así, con estos controles, se puede obtener información precisa y confiable para mejorar la gestión de la producción.
