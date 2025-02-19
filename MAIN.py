@@ -1,30 +1,37 @@
-produccion_minima = 10
-produccion = 0
+meta_produccion = 10  # Litros mínimos requeridos
+produccion_total = 0  # Contador de producción total
 vacas = 0
-produccion_vacas = 0
 cabras = 0
-produccion_cabras = 0
 bufalas = 0
-produccion_bufalas = 0
 
-print("===Produccion de la granja===")
-print("1. vacas")
-print("2. cabras")
-print("3. bufalas")
+print("Registro de producción lechera")
 
-while produccion_minima>produccion:
-  tipo=int(input("ingrese el tipo de animal: "))
-  tipo = int(tipo)
-  if tipo == 1:
-   vacas+=vacas
-  if tipo == 2:
-   cabras+=cabras
-  if tipo == 3:
-   bufalas+=bufalas
-  
+while produccion_total < meta_produccion:
+    tipo_animal = input("Ingrese tipo de animal ordeñado (vaca, cabra, bufala): ").strip().lower()
+    cantidad = int(input("Ingrese cuántos animales ordeñó: "))
+    produccion_por_animal = float(input("Ingrese cuántos litros produjo cada animal: "))
+    
+    if 0.5 <= produccion_por_animal <= 1.5:
+        produccion_obtenida = cantidad * produccion_por_animal
+        produccion_total += produccion_obtenida
+        
+        if tipo_animal == "vaca":
+            vacas += cantidad
+        elif tipo_animal == "cabra":
+            cabras += cantidad
+        elif tipo_animal == "bufala":
+            bufalas += cantidad
+        else:
+            print("Tipo de animal no reconocido. No se registra la producción.")
+            produccion_total -= produccion_obtenida  # Descontar producción no válida
+    else:
+        print("Producción por animal fuera del rango válido. No se registra la producción.")
+    
+    print(f"Producción total acumulada: {produccion_total:.2f} litros")
 
-  tipo=float(input("ingrese cuanto produjo:  "))
-if tipo in [0.5-1.5]:
- break
-tipo=float(tipo) 
-print("No válido, ingrese un numero entre 0.5 y 1.5")
+print("\nMeta de producción alcanzada.")
+print(f"Total de vacas ordeñadas: {vacas}")
+print(f"Total de cabras ordeñadas: {cabras}")
+print(f"Total de búfalas ordeñadas: {bufalas}")
+print(f"Producción total registrada: {produccion_total:.2f} litros")
+
