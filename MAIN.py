@@ -1,5 +1,5 @@
-meta_produccion = 10  # Litros mínimos requeridos
-produccion_total = 0  # Contador de producción total
+meta_produccion = 10  
+produccion_total = 0 
 vacas = 0
 cabras = 0
 bufalas = 0
@@ -23,7 +23,7 @@ while produccion_total < meta_produccion:
             bufalas += cantidad
         else:
             print("Tipo de animal no reconocido. No se registra la producción.")
-            produccion_total -= produccion_obtenida  # Descontar producción no válida
+            produccion_total -= produccion_obtenida  
     else:
         print("Producción por animal fuera del rango válido. No se registra la producción.")
     
